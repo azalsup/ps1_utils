@@ -19,4 +19,4 @@ write-output "to : $dest"
 $log_fpath=$(get-Date -UFormat copy_%Y%m%d_%H%M%S.log)
 
 # Copy
-robocopy "$source" "$dest" /e /Xo /log:"$log_fpath"
+robocopy "$source" "$dest" /e /Xo /Z /ZB /R:5 /W:5 /TBD /NP /V /MT:16 /log:"$log_fpath"
